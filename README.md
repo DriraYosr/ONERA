@@ -5,7 +5,7 @@
 ## Méthodologie de débruitage utilisée:
 * Pour le débruitage des images : RABASAR (ratio-based multitemporal SAR images). C’est un algorithme permettant le “despeckle” des images satellites, c'est-à-dire enlever le bruit granulaire de type speckle. Pour cela on utilise la base de données prétraitées par SNAP. D’abord, on commence par définir l’image de référence appelée “super-image”. Puis on divise une image par la “super-image” pixel par pixel. Ensuite, on fait le filtrage spatial de la “ratio-image”. Enfin, on remonte à l’image d’origine en multipliant l’image résultante par l’image de référence.
 
-** Informations sur la configuration de données utilisées 
+* Informations sur la configuration de données utilisées 
   "sensor": "sentienel-1",
   "site": "victorville",
   "regularizer": "bm3d",
@@ -15,5 +15,9 @@
   
 ## Change Detection: 
 
-*** sources: [https://github.com/simard-landscape-lab/rabasar]
+// à completer
+
+
+
+* sources: [https://github.com/simard-landscape-lab/rabasar]
 [https://arxiv.org/pdf/2307.07892.pdf]
