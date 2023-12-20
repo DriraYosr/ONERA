@@ -16,7 +16,7 @@ Dans une seconde partie, on fait le filtrage spatial de la “ratio-image”. En
 
 
 CODE DE FORMATION DES RATIOS:
-
+--python
 def ratio(img, reference_img):
     # Ajoutez une petite valeur à reference_img pour éviter la division par zéro
     for i in range(np.shape(reference_img)[0]):
@@ -28,7 +28,7 @@ Ratios = []
 for k in range(1, len(Images_rognees)):
     Ratios.append(np.real(ratio(Images_rognees[k], reference_image)))
 
-
+--python
 
 ## Méthologie de suivi de surface de décharge:
 Dans le contexte où la zone de décharge présente une luminosité notablement plus élevée que son environnement, nous avons mis en place une transformation d'image binaire. Cette méthode consiste à seuiller les pixels afin de mettre en évidence la différence de luminosité. Cette transformation simplifie considérablement la tâche d'analyse et de suivi de la superficie de la décharge.
