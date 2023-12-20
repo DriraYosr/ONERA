@@ -1,7 +1,7 @@
 # Traitement d'images SAR (Synthetic Aperture Radar) pour le suivi de l'évolution de décharges sauvages
 ## Présentation générale: 
 * Aujourd’hui, la surconsommation de produits à bas coût entraîne une production excédentaire, sans prévoir la gestion du surplus. Cela conduit à la formation de décharges illicites en pleine nature, de telles dimensions qu’elles sont visibles en imagerie satellitaire (avec de résolutions d’environ dix mètres). Ce projet consistera à étudier l’évolution de différentes décharges clandestines, de voitures en Californie et de vélos défectueux en Chine. Il est nouveau et techniquement compliqué mais aucun enjeu particulier n’est mis par l’entreprise sur sa réalisation.
-
+![Alt text](https://i0.wp.com/www.vvng.com/wp-content/uploads/2018/03/desert-graveyard.png?fit=1740%2C1134&ssl=1)
 ## 
 Les fichiers TIFF utilisés dans les notebooks ont été obtenus après un pré-traitement sur le logiciel `SNAPSeNtinel Application Platform` qui est un logiciel développé par l'Agence spatiale européenne, conçu pour le traitement et l'analyse des données satellites préliminaire visant à aligner toutes les images sur la première.
 
