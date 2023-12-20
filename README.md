@@ -1,6 +1,7 @@
 # Traitement d'images SAR (Synthetic Aperture Radar) pour le suivi de l'évolution de décharges sauvages
 ## Présentation générale: 
 * Aujourd’hui, la surconsommation de produits à bas coût entraîne une production excédentaire, sans prévoir la gestion du surplus. Cela conduit à la formation de décharges illicites en pleine nature, de telles dimensions qu’elles sont visibles en imagerie satellitaire (avec de résolutions d’environ dix mètres). Ce projet consistera à étudier l’évolution de différentes décharges clandestines, de voitures en Californie et de vélos défectueux en Chine. Il est nouveau et techniquement compliqué mais aucun enjeu particulier n’est mis par l’entreprise sur sa réalisation.
+![Image de décharge de voiture à l'aéroport de Victorville](Victorville.png.extension)
 
 ## 
 Les fichiers TIFF utilisés dans les notebooks ont été obtenus après un pré-traitement sur le logiciel `SNAPSeNtinel Application Platform` qui est un logiciel développé par l'Agence spatiale européenne, conçu pour le traitement et l'analyse des données satellites préliminaire visant à aligner toutes les images sur la première.
@@ -35,7 +36,7 @@ Dans le contexte où la zone de décharge présente une luminosité notablement 
 * Une fois les images binaires obtenues, la bibliothèque Scikit-learn[11] et ses fonctions morphologiques ont été utilisées afin de traiter les images. Cette bibliothèque est adaptée pour opérer sur les formes dans les images afin d’améliorer la représentation visuelle des zones d'intérêt. Les opérations morphologiques de base comprennent l’érosion et la dilatation. 
 * Erosion: 
 Les objets de petite taille environnant la zone de décharge sont éliminés en utilisant la fonctionnalité "morphology.remove_small_objects". Cette opération de traitement d'image vise à purifier la représentation visuelle en éliminant les éléments indésirables de dimensions réduites, concentrant ainsi l'analyse sur la zone principale d'intérêt, à savoir la décharge.             
-* Dilatation
+* Dilatation:
 Pour remplir les lacunes dans la zone d'intérêt, fusionner les parties disjointes et élargir les contours la fonctionnalité  "morphology.binary_dilation" est utilisée.
 
 * sources:
