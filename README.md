@@ -3,32 +3,20 @@
 * Aujourd’hui, la surconsommation de produits à bas coût entraîne une production excédentaire, sans prévoir la gestion du surplus. Cela conduit à la formation de décharges illicites en pleine nature, de telles dimensions qu’elles sont visibles en imagerie satellitaire (avec de résolutions d’environ dix mètres). Ce projet consistera à étudier l’évolution de différentes décharges clandestines, de voitures en Californie et de vélos défectueux en Chine. Il est nouveau et techniquement compliqué mais aucun enjeu particulier n’est mis par l’entreprise sur sa réalisation.
 ![Alt text](https://i0.wp.com/www.vvng.com/wp-content/uploads/2018/03/desert-graveyard.png?fit=1740%2C1134&ssl=1)
 ## 
+
 Les fichiers TIFF utilisés dans les notebooks ont été obtenus après un pré-traitement sur le logiciel `SNAPSeNtinel Application Platform` qui est un logiciel développé par l'Agence spatiale européenne, conçu pour le traitement et l'analyse des données satellites préliminaire visant à aligner toutes les images sur la première.
 
-## Méthodologie de débruitage :
-
-* Pour le débruitage des images : RABASAR (ratio-based multitemporal SAR images). C’est un algorithme permettant le “despeckle” des images satellites, c'est-à-dire enlever le bruit granulaire de type speckle. Pour cela on utilise la base de données prétraitées par SNAP. D’abord, on commence par définir l’image de référence appelée “super-image”. Puis on divise une image par la “super-image” pixel par pixel. Ensuite, on fait le filtrage spatial de la “ratio-image”. Enfin, on remonte à l’image d’origine en multipliant l’image résultante par l’image de référence.
-Dans une seconde partie, on fait le filtrage spatial de la “ratio-image”. Enfin, on remonte à l’image d’origine en multipliant l’image résultante par l’image de référence. (cette partie ,n'est pas incluse dans le github)
 * Informations sur la configuration de données utilisées 
 *sensor: "sentienel-1", Images "SLC": Single Look Complex
 * Mode d'aquisition des images: "IW"(Interferometric Wide)
 *sites: "victorville", "AltoHospicio","Hangzhou"
 
+## Méthodologie de débruitage :
+ Les images sont ensuite co-enregistrées afin de créer une base de données. Ensuite, ces images sont redécoupées et à l’aide de l’algorithme RABASAR[6] et une image ratio montrant les changements entre deux images est obtenue. Après traitement et filtrage et conversion en images binaires, il est aisé d’obtenir le nombre de pixels des changements de la décharge et ainsi de tracer un graphe montrant les évolutions de la superficie de décharge en fonction du temps.
+ 
+![Architecture de la démarche suivie](C:\Users\Drira Yosr\Downloads\architecture.png)
 
-CODE DE FORMATION DES RATIOS:
-```python
-def ratio(img, reference_img):
-    # Ajoutez une petite valeur à reference_img pour éviter la division par zéro
-    for i in range(np.shape(reference_img)[0]):
-        for j in range(np.shape(reference_img)[1]):
-            if reference_img[i, j] == 0. + 0.j:
-                reference_img[i, j] = 1e-3 + 0.j
-    return np.clip(img / reference_image, 1e-3, 10)
-Ratios = []
-for k in range(1, len(Images_rognees)):
-    Ratios.append(np.real(ratio(Images_rognees[k], reference_image)))
 
-```
 
 ## Méthologie de suivi de surface de décharge:
 Dans le contexte où la zone de décharge présente une luminosité notablement plus élevée que son environnement, nous avons mis en place une transformation d'image binaire. Cette méthode consiste à seuiller les pixels afin de mettre en évidence la différence de luminosité. Cette transformation simplifie considérablement la tâche d'analyse et de suivi de la superficie de la décharge.
