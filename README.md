@@ -29,6 +29,11 @@ Une fois les images binaires obtenues, la bibliothèque Scikit-learn et ses fonc
 - **Dilatation:**
   Pour remplir les lacunes dans la zone d'intérêt, fusionner les parties disjointes et élargir les contours, la fonctionnalité "morphology.binary_dilation" est utilisée.
 
+
+Le diagramme ci-dessous détaille la séquence d'application des notebooks pour le suivi des changements, conformément à la description précédente. Suivez ces étapes dans l'ordre indiqué:
+![Etapes](https://github.com/DriraYosr/ONERA/assets/123462890/fa0847b6-e353-4ebe-8241-157414414257)
+
+
 ### Sources
 - [RABASAR GitHub Repository](https://github.com/simard-landscape-lab/rabasar)
 - [Article scientifique sur RABASAR](https://arxiv.org/pdf/2307.07892.pdf)
