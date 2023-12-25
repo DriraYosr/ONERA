@@ -14,8 +14,8 @@ Les fichiers TIFF utilisés dans les notebooks ont été obtenus après un pré-
 ## Méthodologie de débruitage :
  Les images sont ensuite co-enregistrées afin de créer une base de données. Ensuite, ces images sont redécoupées et à l’aide de l’algorithme RABASAR[6] et une image ratio montrant les changements entre deux images est obtenue. Après traitement et filtrage et conversion en images binaires, il est aisé d’obtenir le nombre de pixels des changements de la décharge et ainsi de tracer un graphe montrant les évolutions de la superficie de décharge en fonction du temps.
  
-![Architecture de la démarche suivie](C:/Users/Drira Yosr/Downloads/architecture.png)
 
+![architecture](https://github.com/DriraYosr/ONERA/assets/123462890/186f2120-4871-42d9-ad33-5cd7cf5635a6)
 
 
 
