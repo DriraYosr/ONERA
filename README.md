@@ -31,7 +31,8 @@ Une fois les images binaires obtenues, la bibliothèque Scikit-learn et ses fonc
 
 
 Le diagramme ci-dessous détaille la séquence d'application des notebooks pour le suivi des changements, conformément à la description précédente. Suivez ces étapes dans l'ordre indiqué:
-![Uploading Etapes (2).png…]()
+
+![Etapes (2)](https://github.com/DriraYosr/ONERA/assets/123462890/2528ed9a-e506-48e6-abdd-6cd067cd3f8a)
 
 
 
